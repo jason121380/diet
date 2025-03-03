@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡路里追蹤器</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="page-calories" class="page active">
+            <!-- 記錄卡路里攝取 -->
+            <div class="calorie-form">
+                <h2>記錄卡路里攝取</h2>
+                <div class="input-group calories-input">
+                    <label>卡路里：</label>
+                    <input type="number" id="calories" placeholder="請輸入卡路里">
+                </div>
+                <div class="input-group">
+                    <label>餐別：</label>
+                    <div class="meal-type-group">
+                        <label class="meal-type-option">
+                            <input type="radio" name="mealType" value="早餐" checked>
+                            <span>早餐</span>
+                        </label>
+                        <label class="meal-type-option">
+                            <input type="radio" name="mealType" value="中餐">
+                            <span>中餐</span>
+                        </label>
+                        <label class="meal-type-option">
+                            <input type="radio" name="mealType" value="晚餐">
+                            <span>晚餐</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>日期：</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="input-group">
+                    <label>時間：</label>
+                    <input type="time" id="time">
+                </div>
+                <button id="add-record-btn" type="button">添加記錄</button>
+            </div>
+            <!-- 今日攝取記錄 -->
+            <div class="records">
+                <h2>今日攝取記錄</h2>
+                <div id="calorie-records"></div>
+            </div>
+            <!-- 卡路里攝取趨勢 -->
+            <div class="chart-container">
+                <h2>卡路里攝取趨勢</h2>
+                <canvas id="calorieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
